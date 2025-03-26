@@ -31,3 +31,57 @@ section {
     text-align: left;
     max-width: 900px;
 }
+
+#container, h1, #motivation, #center{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+#ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: left; 
+    width: 60%;
+    max-width: 800px;   
+}
+
+
+.visited { 
+    color: black;
+    background-color: gray;
+}
+
+#imageLinks{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;  
+}
+.imge{
+    height:300px;
+    width: 250px; 
+    padding: 20px;
+    text-align: center;
+    border-radius: 10p;
+    margin-left : 50px;
+}
+
+#text-div{
+    background-color: #1B1F3B;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.copy{
+    margin-left : 50px;
+    width: 290px;   
+    background-color: #1B1F3B;
+    text-align: left; 
+}
+
+.reduced{
+    height:320px;
+    width: 250px; 
+}

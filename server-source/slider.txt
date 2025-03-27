@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonial Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="testimonial-container">
+      <img
+        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80"
+        alt="user-image"
+      />
+      <p class="text">
+        This is simply unbelievable! I would be lost without Apple. The very
+        best. Not able to tell you how happy I am with Apple.
+      </p>
+      <h4 class="username">Cherise G</h4>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+
+const testimonials = [ // Array storing testimonials
+  { name: "Cherise G", photoUrl: "image1.jpg", text: "Great product!" },
+  { name: "Rosetta Q", photoUrl: "image2.jpg", text: "Amazing service!" },
+  { name: "Constantine V", photoUrl: "image3.jpg", text: "Highly recommended!" }
+];
+
+const imgEl = document.querySelector("img"); // Selects image element
+const textEl = document.querySelector(".text"); // Selects text container
+const usernameEl = document.querySelector(".username"); // Selects name container
+
+let idx = 0; // Keeps track of current testimonial
+
+updateTestimonial(); // Starts the first testimonial display
+
+function updateTestimonial() {
+  const { name, photoUrl, text } = testimonials[idx]; // Extracts current testimonial
+  imgEl.src = photoUrl; // Updates image
+  textEl.innerText = text; // Updates testimonial text
+  usernameEl.innerText = name; // Updates name
+  
+  idx++; // Move to the next testimonial
+  if (idx === testimonials.length) idx = 0; // Reset index if at the end
+
+  setTimeout(updateTestimonial, 10000); // Calls function every 10 seconds
+}

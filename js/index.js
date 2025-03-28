@@ -34,12 +34,14 @@ function displayImages(resources){
 
 
 function displayContent(){
+    console.log(selectedProject)
     const displayedContent=document.querySelector('#displayAnalysis')
     const btnDisplay=document.querySelector('#practice')
     const code=document.createElement('img')
     const btnContent="Practice"
     const btn=document.createElement('button')
     btn.textContent=btnContent
+    btn.addEventListener('click',displaySandbox)
     btn.style.height="5vh"
     btn.style.width="200px"
     const explanation=document.createElement('img')
@@ -56,4 +58,25 @@ function displayContent(){
     displayedContent.appendChild(explanation)
     btnDisplay.appendChild(btn)
 }
+
+function displaySandbox(){
+    console.log(selectedProject)
+    const SandBox=document.querySelector('#sandBox')
+    const UserCode=document.querySelector('#userInput')
+    const textArea=document.createElement('textarea')
+    textArea.id="code"
+    console.log(textArea)
+    const runBtn=document.createElement("button")
+    const runContent="Run"
+    runBtn.textContent=runContent
+    runBtn.id="RUN"
+    runBtn.addEventListener('click',runCode)
+    const Console=document.createElement('div')
+    Console.id="console-output"
+    UserCode.append(runBtn)
+    UserCode.append(textArea)
+    SandBox.append(UserCode)
+    SandBox.append(Console)
+}
+
 

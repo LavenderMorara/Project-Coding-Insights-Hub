@@ -98,3 +98,53 @@ input{
     justify-content: space-between;
 
 }
+#sandBox{
+    display: flex;
+    flex-direction:row; 
+    height: 30vh;  
+
+    border-radius: 10px;
+        
+}
+
+#console-output {
+    margin-top: 10px;
+    padding: 10px;
+    background:blueviolet;
+    color: navy;
+    width: 500px;
+    min-height: 29vh;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+#RUN{
+    margin-top: 10px;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#code{
+    margin-top: 10px;
+    padding: 10px;
+    background:blueviolet;
+    color: navy;
+    width: 500px;
+    min-height: 25vh;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+#userInput{
+    display: flex;
+    flex-direction: column;
+}
+

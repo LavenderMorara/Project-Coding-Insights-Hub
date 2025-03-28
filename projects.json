@@ -1,10 +1,12 @@
 {
     "Projects":[
         {
-            "id":"1",
+            "id":1,
             "title":"testimonials slider",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
-            "content":"server-source/slider.txt"
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/slider-code.png",
+            "explanation":"images/slider-explanation.png"
         }
+
     ]
 }

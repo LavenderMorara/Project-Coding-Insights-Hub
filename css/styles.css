@@ -91,3 +91,10 @@ input{
     width: 500px;
 }
 
+#displayAnalysis{
+    display: flex;
+    flex-direction:row;
+    background-color: whitesmoke;
+    justify-content: space-between;
+
+}

@@ -36,14 +36,7 @@ function displayImages(resources){
 function displayContent(){
     console.log(selectedProject)
     const displayedContent=document.querySelector('#displayAnalysis')
-    const btnDisplay=document.querySelector('#practice')
-    const code=document.createElement('img')
-    const btnContent="Practice"
-    const btn=document.createElement('button')
-    btn.textContent=btnContent
-    btn.addEventListener('click',displaySandbox)
-    btn.style.height="5vh"
-    btn.style.width="200px"
+    const code=document.createElement('img')    
     const explanation=document.createElement('img')
     console.log(selectedProject.content)
     code.src=selectedProject.image
@@ -54,13 +47,6 @@ function displayContent(){
     explanation.alt=selectedProject.title
     explanation.style.height="70vh"
     explanation.style.width="700px"
-    displayedContent.appendChild(code)
-    displayedContent.appendChild(explanation)
-    btnDisplay.appendChild(btn)
-}
-
-function displaySandbox(){
-    console.log(selectedProject)
     const SandBox=document.querySelector('#sandBox')
     const UserCode=document.querySelector('#userInput')
     const textArea=document.createElement('textarea')
@@ -73,10 +59,45 @@ function displaySandbox(){
     runBtn.addEventListener('click',runCode)
     const Console=document.createElement('div')
     Console.id="console-output"
+    const CodeBtn=document.createElement('button')
+    CodeBtn.id="cdeWarBtn"
+    CodeBtn.textContent="Code War?"
     UserCode.append(runBtn)
     UserCode.append(textArea)
     SandBox.append(UserCode)
     SandBox.append(Console)
+    displayedContent.appendChild(code)
+    displayedContent.appendChild(explanation)
+}
+
+
+function runCode() {
+    const code = document.querySelector("#code").value;
+    const consoleOutput = document.querySelector("#console-output");
+    consoleOutput.innerHTML = "";
+
+    let log = [];
+    const oldLog = console.log;
+
+    console.log = (...args) => {
+        log.push(args.join(" "));
+        oldLog.apply(console, args);
+    };
+
+    try {
+        const result = new Function(code)();
+        console.log = oldLog;
+
+        if (log.length) {
+            consoleOutput.innerHTML = log.join("<br>");
+        } else if (result !== undefined) {
+            consoleOutput.innerHTML = result;
+        }
+    } catch (error) {
+        consoleOutput.innerHTML = `<span style='color: red;'>Error: ${error}</span>`;
+    }
+
+    console.log = oldLog;
 }
 
 

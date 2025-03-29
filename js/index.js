@@ -1,4 +1,4 @@
-const projectsUrl="http://localhost:3000"
+const projectsUrl="https://coding-insights-hub-projects-server.vercel.app"
 const resources="Projects"
 
 let selectedProject;
@@ -102,7 +102,17 @@ function runCode() {
     console.log = oldLog;
 }
 
-const quizUrl=""
-const recource2=""
+const quizUrl="http://localhost:3000"
+const recource2="Quizzes"
 const fullQuizUrl=`${quizUrl}/${recource2}`
 
+
+const practiceCodeWars=document.getElementById('quiz-nav')
+practiceCodeWars.addEventListener('click',()=>fetchChallenges)
+
+function fetchChallenges(){
+    fetch(`${fullQuizUrl}`)
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+    .catch(err=>console.log(err))
+}

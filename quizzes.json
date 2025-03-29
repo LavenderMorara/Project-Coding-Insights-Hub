@@ -1,0 +1,89 @@
+{
+   "Quizzes":[
+    {
+        "id":1,
+        "title":"Anagram Detection",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/anagram-detection-quiz.png",
+        "link":"https://www.codewars.com/kata/554b4ac871d6813a03000035"
+    },
+    {
+        "id":2,
+        "title":"ConvertFrom CamelCase To snakecase",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/camelCase-to-snakecase-quiz.png",
+        "link":"https://www.codewars.com/kata/529b418d533b76924600085d"
+    },
+    {
+        "id":3,
+        "title":"Credit Card Mask",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/credit-card-mask-quiz.png",
+        "link":"https://www.codewars.com/kata/5412509bd436bd33920011bc"
+    },
+    {
+        "id":4,
+        "title":"Find Longest Word",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/find-longest-word-quiz.png",
+        "link":"https://www.codewars.com/kata/56f173a35b91399a05000cb7"
+    },
+    {
+        "id":5,
+        "title":"Find Missing Character",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/find-missing-character-quiz.png",
+        "link":"https://www.codewars.com/kata/52de553ebb55d1fca3000371"
+    },
+    {
+        "id":6,
+        "title":"First Non-Repeating Character",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/first-repeating-character-quiz.png",
+        "link":"https://www.codewars.com/kata/52bc74d4ac05d0945d00054e"
+    },
+    {
+        "id":7,
+        "title":"Flatten",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/flatten-quiz.png",
+        "link":"https://www.codewars.com/kata/5250a89b1625e5decd000413"
+    },
+    {
+        "id":8,
+        "title":"Get Middle Character",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/get-middle-character-quiz.png",
+        "link":"https://www.codewars.com/kata/56747fd5cb988479af000028"
+    },
+    {
+        "id":9,
+        "title":"Reversed Strings",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/reversed-strings-quiz.png",
+        "link":"https://www.codewars.com/kata/5168bb5dfe9a00b126000018"
+    },
+    {
+        "id":10,
+        "title":"Sum Of Positive Integers",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/sum-of-positive-quiz.png",
+        "link":"https://www.codewars.com/kata/5715eaedb436cf5606000381"
+    },
+    {
+        "id":11,
+        "title":"Vowel Count",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/vowel-count-quiz.png",
+        "link":"https://www.codewars.com/kata/54ff3102c1bad923760001f3"
+    },
+    {
+        "id":12,
+        "title":"Factorial",
+        "cover":"https://img.freepik.com/free-vector/technology-future-banner_23-2148910739.jpg?uid=R187920578&semt=ais_hybrid",
+        "quiz":"images/factorial-quiz.png",
+        "link":"https://www.codewars.com/kata/57a049e253ba33ac5e000212"
+    }
+    
+   ]
+}

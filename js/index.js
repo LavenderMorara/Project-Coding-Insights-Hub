@@ -1,4 +1,4 @@
-const baseUrl="http://localhost:3000"
+const projectsUrl="http://localhost:3000"
 const resources="Projects"
 
 let selectedProject;
@@ -6,7 +6,7 @@ let selectedProject;
 document.addEventListener('DOMContentLoaded', fetchAnalysis)
 
 function fetchAnalysis(){
-    fetch(`${baseUrl}/${resources}`)
+    fetch(`${projectsUrl}/${resources}`)
     .then(res=>res.json())
     .then(data=>displayImages(data))
     .catch(err=>console.log(err))
@@ -16,7 +16,8 @@ function fetchAnalysis(){
 function displayImages(resources){
     resources.forEach(project => {
         selectedProject=project
-        const analysisDisplay=document.querySelector('#imagesD')
+        const analysisDisplay=document.querySelector('#analysis-display')
+        div=document.createElement('div')
         let img=document.createElement('img')
         let h3=document.createElement('h3')
         project.textContent=selectedProject.content
@@ -27,8 +28,9 @@ function displayImages(resources){
         img.style.height="270px"
         img.style.width="240px"
         console.log(img)
-        analysisDisplay.appendChild(img) 
-        analysisDisplay.append(h3)   
+        div.appendChild(h3)
+        div.appendChild(img)
+        analysisDisplay.appendChild(div)    
     })
 }
 
@@ -100,4 +102,7 @@ function runCode() {
     console.log = oldLog;
 }
 
+const quizUrl=""
+const recource2=""
+const fullQuizUrl=`${quizUrl}/${recource2}`
 

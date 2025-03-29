@@ -147,3 +147,15 @@ input{
     flex-direction: column;
 }
 
+#analysis-display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:80px;
+}
+
+#i{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}

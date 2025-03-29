@@ -6,7 +6,90 @@
             "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
             "image":"images/slider-code.png",
             "explanation":"images/slider-explanation.png"
+        },
+        {
+            "id":2,
+            "title":"Anime Pics Animator",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/anime-pics-generator-code.png",
+            "explanation":"images/anime-pics-animator-explanation.png"
+        },
+        {
+            "id":3,
+            "title":"Auto Text Animation",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/auto-text-animation-code.png",
+            "explanation":"images/auto-text-animation-explanation.png"
+        },
+        {
+            "id":4,
+            "title":"Basic Calculator",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/basic-calc-code.png",
+            "explanation":"images/basic-calc-explanation.png"
+        },
+        {
+            "id":5,
+            "title":"Back Ground Video",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/bg-video-code.png",
+            "explanation":"images/bg-video-explanation.png"
+        },
+        {
+            "id":6,
+            "title":"Back Groung Image Scroller",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/bg-image-scroll-code.png",
+            "explanation":"images/bg-image-scroll-explanation.png"
+        },
+        {
+            "id":7,
+            "title":"Blurred Back Ground Pop Up",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/blurred-bg-pop-up-code.png",
+            "explanation":"images/blurred-bg-pop-up-explanation.png"
+        },
+        {
+            "id":8,
+            "title":"BMI Calculator",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/bmi-calc-code.png",
+            "explanation":"images/bmi-calc-explanation.png"
+        },
+        {
+            "id":9,
+            "title":"Button Ripple Effect",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/btn-ripple-effect-code.png",
+            "explanation":"images/btn-ripple-effect-explanation.png"
+        },
+        {
+            "id":10,
+            "title":"Digital Clock",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/clock-code.png",
+            "explanation":"images/clock-explanation.png"
+        },
+        {
+            "id":11,
+            "title":"Counter",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/counter-code.png",
+            "explanation":"images/counter-explanation.png"
+        },
+        {
+            "id":12,
+            "title":"Currency Convertor",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/currency-converter-code.png",
+            "explanation":"images/currency-convertor-explanation.png"
+        },
+        {
+            "id":13,
+            "title":"Dark Mode Toggler",
+            "cover":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6_RCmFWH9nZrDSV4g8GpMlu3CUSWVl-VElg&s",
+            "image":"images/dark-mode-toggle-code.png",
+            "explanation":"images/dark-mode-toggle-explantion.png"
         }
-
     ]
 }

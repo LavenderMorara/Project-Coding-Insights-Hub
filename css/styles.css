@@ -147,15 +147,57 @@ input{
     flex-direction: column;
 }
 
-#analysis-display{
+#analysis-display, #codingQuiz{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap:80px;
+    gap:180px;
 }
 
-#i{
+#code-war-sandBox{
+    margin-top: 10px;
+    padding: 10px;
+    background:blueviolet;
+    color: navy;
+    width: 80vh;
+    min-height: 52vh;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+#sandBox2{
+    margin-top: 10px;
+    padding: 10px;
+    background:blueviolet;
+    color: navy;
+    width: 40vh;
+    min-height: 56vh;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow-y: auto;
+}
+
+#Add-Css{
+    display: flex;
+    flex-direction:row;   
+    border-radius: 10px
+
+}
+
+#add-row-flex{
     display: flex;
     flex-direction: column;
-    gap:10px;
+}
+
+#add-color{
+    margin-top: 10px;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

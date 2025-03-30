@@ -255,7 +255,6 @@ document.addEventListener('DOMContentLoaded',displayChallenges)
 
 function displayChallenges(quizServerData){
     const challengesDisplay=document.querySelector('#coding')
-     challengeDetailsDisplay.innerHTML="";
     quizServerData.forEach(quiz=>{
         selectedQuiz=quiz
         const div=document.createElement('div')
@@ -278,6 +277,7 @@ function displayChallenges(quizServerData){
 
 function displayChallengeDetails(selectedQuiz){
     const challengeDetailsDisplay=document.querySelector('#Code-space')
+     challengeDetailsDisplay.innerHTML="";
     console.log(selectedQuiz)
     challengeDetailsDisplay.innerHTML="";
     const img=document.createElement('img')

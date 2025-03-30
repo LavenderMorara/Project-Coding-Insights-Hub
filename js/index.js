@@ -177,7 +177,7 @@ function displayContent(selectedProject){
     const CodeBtn=document.createElement('button')
     CodeBtn.id="cdeWarBtn"
     CodeBtn.textContent="Code War?"
-    userCode.innerHTML="";
+    UserCode.innerHTML="";
     SandBox.innerHTML="";
     UserCode.append(runBtn)
     UserCode.append(textArea)

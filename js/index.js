@@ -143,7 +143,7 @@ function displayImages(resources){
 
 
 function displayContent(selectedProject){
-     console.log(selectedProject)
+     //console.log(selectedProject)
     const displayedContent=document.querySelector('#displayAnalysis')
     displayedContent.innerHTML="";
     const code=document.createElement('img')    
@@ -190,8 +190,8 @@ function displayContent(selectedProject){
 function updateLikes(selectedProject){
     const LIKES=parseInt(selectedProject.likes,10)
     const Likes=document.querySelector('#likesCount')
-    console.log(selectedProject.id)
-    console.log(selectedProject.likes)
+    //console.log(selectedProject.id)
+    //console.log(selectedProject.likes)
     const newLikes=LIKES+1
     fetch(`${projectsUrl}/${resources}/${selectedProject.id}`,{
         method:"PATCH",
@@ -281,7 +281,7 @@ function displayChallenges(quizServerData){
 function displayChallengeDetails(selectedQuiz){
     const challengeDetailsDisplay=document.querySelector('#Code-space')
      challengeDetailsDisplay.innerHTML="";
-    console.log(selectedQuiz)
+    //console.log(selectedQuiz)
     challengeDetailsDisplay.innerHTML="";
     const img=document.createElement('img')
     const div1=document.createElement('div')
@@ -296,7 +296,7 @@ function displayChallengeDetails(selectedQuiz){
     a.textContent="Submit To Code Wars"
     a.href=selectedQuiz.link
     a.target = "_blank"
-    console.log(a)
+    //console.log(a)
     a.style.fontSize="25px"
     div3.style.minHeight="58vh"
     const div4=document.createElement('div')
@@ -316,7 +316,7 @@ function displayChallengeDetails(selectedQuiz){
     div4.appendChild(TextArea)
     div3.appendChild(div4)
     div3.id="Add-Css"
-    console.log(div3)
+    //console.log(div3)
     div3.innerHTML="";
     div3.appendChild(Console)
     div1.appendChild(img)

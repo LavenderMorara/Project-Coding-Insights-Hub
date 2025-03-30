@@ -286,7 +286,7 @@ function displayChallengeDetails(selectedQuiz){
     const a=document.createElement('a')
     img.src=selectedQuiz.quiz
     img.alt=selectedQuiz.title
-    div1.style.height="35vh"
+    div1.style.height="50vh"
     div1.style.width="95vh"
     div1.classList.add("challenge-divs")
     a.textContent="Submit To Code Wars"
@@ -294,7 +294,7 @@ function displayChallengeDetails(selectedQuiz){
     a.target = "_blank"
     console.log(a)
     a.style.fontSize="25px"
-    div3.style.height="58vh"
+    div3.style.minHeight="58vh"
     const div4=document.createElement('div')
     const TextArea=document.createElement('textarea')
     const runBtn=document.createElement('button')

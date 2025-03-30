@@ -1,9 +1,71 @@
-const projectsUrl="https://coding-insights-hub-projects-server.vercel.app"
+const projectsUrl="https://projects-server-2.vercel.app"
 const resources="Projects"
 
 let selectedProject;
 
-document.addEventListener('DOMContentLoaded', fetchAnalysis)
+document.addEventListener("DOMContentLoaded", function () {
+    function showSection(sectionId) {
+        document.querySelectorAll("section").forEach(section => {
+            section.style.display = "none";
+        });
+
+        const activeSection = document.querySelector(sectionId);
+        if (activeSection) {
+            activeSection.style.display = "block";
+        }
+    }
+
+    function updateActiveSection() {
+        let sectionId = location.hash || "#home";
+        showSection(sectionId);
+    }
+
+    document.querySelectorAll(".Nlink").forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            let sectionId = this.getAttribute("href");
+            location.hash = sectionId;
+            showSection(sectionId);
+        });
+    });
+
+    updateActiveSection();
+});
+
+
+const insightsUrl="https://best-practices-server.vercel.app/insights"
+
+
+function fetchInsights() {
+    fetch(insightsUrl)
+        .then(response => response.json())
+        .then(data => displayInsights(data))
+        .catch(error => console.error("Error fetching insights:", error));
+}
+
+function displayInsights(insights) {
+    const insightsContainer = document.getElementById("insights");
+    insightsContainer.innerHTML = "";
+
+    insights.forEach(insight => {
+        const div = document.createElement("div");
+        div.classList.add("insight-item");
+        div.textContent = insight.content;
+
+        const br1 = document.createElement("br");
+        const br2 = document.createElement("br");
+
+        insightsContainer.appendChild(div);
+        insightsContainer.appendChild(br1);
+        insightsContainer.appendChild(br2);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", fetchInsights);
+
+
+const AnalysisContent=document.getElementById('lavender')
+AnalysisContent.addEventListener('click',fetchAnalysis)
 
 function fetchAnalysis(){
     fetch(`${projectsUrl}/${resources}`)
@@ -13,19 +75,20 @@ function fetchAnalysis(){
   
 }
 
+document.addEventListener("DOMContentLoaded", displayImages);
+
 function displayImages(resources){
     resources.forEach(project => {
         selectedProject=project
-        const analysisDisplay=document.querySelector('#analysis-display')
+        const analysisDisplay=document.querySelector('#displayAnalysisList')
         const div=document.createElement('div')
         let img=document.createElement('img')
         let h3=document.createElement('h3')
-        project.textContent=selectedProject.content
-        h3.textContent=selectedProject.title
-        img.src=selectedProject.cover
-        img.alt=selectedProject.title
+        h3.textContent=project.title
+        img.src=project.cover
+        img.alt=project.title
         img.addEventListener('click', 
-            ()=>{displayContent()
+            ()=>{displayContent(project)
             })
         img.style.height="270px"
         img.style.width="240px"
@@ -37,12 +100,15 @@ function displayImages(resources){
 }
 
 
-function displayContent(){
-    // console.log(selectedProject)
+function displayContent(selectedProject){
+     console.log(selectedProject)
     const displayedContent=document.querySelector('#displayAnalysis')
     const code=document.createElement('img')    
     const explanation=document.createElement('img')
-    // console.log(selectedProject.content)
+    const likeBtn=document.querySelector('#likebtn')
+    likeBtn.addEventListener('click',()=>updateLikes(selectedProject))
+    const Likes=document.querySelector('#likesCount')
+    Likes.textContent=selectedProject.likes
     code.src=selectedProject.image
     code.alt=selectedProject.title
     code.style.height="70vh"
@@ -76,6 +142,23 @@ function displayContent(){
     displayedContent.appendChild(explanation)
 }
 
+function updateLikes(selectedProject){
+    const LIKES=parseInt(selectedProject.likes,10)
+    const Likes=document.querySelector('#likesCount')
+    console.log(selectedProject.id)
+    console.log(selectedProject.likes)
+    const newLikes=LIKES+1
+    fetch(`${projectsUrl}/${resources}/${selectedProject.id}`,{
+        method:"PATCH",
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({likes:newLikes})
+    })
+    .then(res=>res.json())
+    .then(Likes.textContent=newLikes)
+    .catch(err=>console.log(err))
+}
 
 function runCode() {
     const code = document.querySelector(".code1").value;
@@ -106,23 +189,30 @@ function runCode() {
     console.log = oldLog;
 }
 
+document.addEventListener("DOMContentLoaded", fetchAnalysis);
+
+
 const quizUrl="https://coding-insights-hub-quizzes-server.vercel.app"
 const quizServerData="Quizzes"
 
 let selectedQuiz;
 
-const practiceCodeWars=document.getElementById('go-to-codeChallenges')
+const practiceCodeWars=document.getElementById('practice')
 practiceCodeWars.addEventListener('click',fetchChallenges)
 
+
+ document.addEventListener('DOMContentLoaded', fetchChallenges)
 function fetchChallenges(){
     fetch(`${quizUrl}/${quizServerData}`)
     .then(res=>res.json())
-    .then(data=>displayChallenges(data))
+    .then((data)=>displayChallenges(data))
     .catch(err=>console.log(err))
 }
 
+document.addEventListener('DOMContentLoaded',displayChallenges)
+
 function displayChallenges(quizServerData){
-    const challengesDisplay=document.querySelector('#codingQuiz')
+    const challengesDisplay=document.querySelector('#coding')
     quizServerData.forEach(quiz=>{
         selectedQuiz=quiz
         const div=document.createElement('div')
@@ -132,35 +222,36 @@ function displayChallenges(quizServerData){
         img.alt=quiz.title
         img.style.height="270px"
         img.style.width="240px"
-        img.addEventListener('click',
-            ()=>{displayChallengeDetails()
-        })
-        h3.textContent=selectedQuiz.title
+        img.addEventListener('click',()=>displayChallengeDetails(quiz))
+        h3.textContent=quiz.title
         h3.style.width="230px"
         h3.style.height="65px"
         div.appendChild(h3)
         div.appendChild(img)
         challengesDisplay.appendChild(div)
     })
+   
 }
 
-function displayChallengeDetails(){
+function displayChallengeDetails(selectedQuiz){
     const challengeDetailsDisplay=document.querySelector('#Code-space')
     console.log(selectedQuiz)
+    challengeDetailsDisplay.innerHTML="";
     const img=document.createElement('img')
     const div1=document.createElement('div')
     const div2=document.createElement('div')
     const div3=document.createElement('div')
-    const btn=document.createElement('button')
     const a=document.createElement('a')
     img.src=selectedQuiz.quiz
     img.alt=selectedQuiz.title
     div1.style.height="35vh"
     div1.style.width="95vh"
     div1.classList.add("challenge-divs")
-    btn.textContent="Submit To Code Wars"
+    a.textContent="Submit To Code Wars"
     a.href=selectedQuiz.link
+    a.target = "_blank"
     console.log(a)
+    a.style.fontSize="25px"
     div3.style.height="58vh"
     const div4=document.createElement('div')
     const TextArea=document.createElement('textarea')
@@ -180,11 +271,11 @@ function displayChallengeDetails(){
     div3.id="Add-Css"
     console.log(div3)
     div3.appendChild(Console)
-    btn.appendChild(a)
     div1.appendChild(img)
-    div2.appendChild(btn)
+    div2.appendChild(a)
     challengeDetailsDisplay.appendChild(div1)
     challengeDetailsDisplay.appendChild(div3)
     challengeDetailsDisplay.appendChild(div2)
     
 }
+

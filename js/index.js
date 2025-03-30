@@ -178,9 +178,9 @@ function displayContent(selectedProject){
     CodeBtn.id="cdeWarBtn"
     CodeBtn.textContent="Code War?"
     userCode.innerHTML="";
+    SandBox.innerHTML="";
     UserCode.append(runBtn)
     UserCode.append(textArea)
-    SandBox.innerHTML="";
     SandBox.append(UserCode)
     SandBox.append(Console)
     displayedContent.appendChild(code)

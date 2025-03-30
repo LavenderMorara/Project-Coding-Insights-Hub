@@ -255,6 +255,7 @@ document.addEventListener('DOMContentLoaded',displayChallenges)
 
 function displayChallenges(quizServerData){
     const challengesDisplay=document.querySelector('#coding')
+     challengeDetailsDisplay.innerHTML="";
     quizServerData.forEach(quiz=>{
         selectedQuiz=quiz
         const div=document.createElement('div')

@@ -145,6 +145,7 @@ function displayImages(resources){
 function displayContent(selectedProject){
      console.log(selectedProject)
     const displayedContent=document.querySelector('#displayAnalysis')
+    displayedContent.innerHTML="";
     const code=document.createElement('img')    
     const explanation=document.createElement('img')
     const likeBtn=document.querySelector('#likebtn')

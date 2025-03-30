@@ -1,7 +1,49 @@
 const projectsUrl="https://projects-server-2.vercel.app"
 const resources="Projects"
+const usersUrl="https://coding-insights-hub-user-server.vercel.app/Users"
 
 let selectedProject;
+
+document.addEventListener('DOMContentLoaded',postSignUpAndGoToHome)
+function postSignUpAndGoToHome(){
+    const btn=document.querySelector('#signUpButton')
+    btn.addEventListener('click', ()=>{
+        location.hash = "#home";
+       alert("User Successfully Registered")
+    document.querySelectorAll("section").forEach(section => {
+        section.style.display = section.id === "home" ? "block" : "none";
+    });
+});
+
+   const form=document.querySelector('#signUpForm')
+   form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const userData = { email, password };
+
+    fetch(usersUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(window.location.reload())
+    .then(data => {
+        console.log("User registered successfully:", data);
+    })
+    .catch(error => {
+        console.error("Error:", error);
+
+    });
+});
+
+}
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
     function showSection(sectionId) {
@@ -16,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateActiveSection() {
-        let sectionId = location.hash || "#home";
+        let sectionId = location.hash || "#signUp";
         showSection(sectionId);
     }
 

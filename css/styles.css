@@ -38,7 +38,7 @@ section:target {
     max-width: 900px;
 }
 
-#container, h1, #motivation, #center{
+#container, h1, #motivation, #center, #email, #password{
     display: flex;
     justify-content: center;
     align-items: center; 

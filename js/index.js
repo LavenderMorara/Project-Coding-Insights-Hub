@@ -309,11 +309,13 @@ function displayChallengeDetails(selectedQuiz){
     TextArea.classList.add('code1')
     runBtn.addEventListener('click',runCode)
     div4.id="add-row-flex"
+    div4.innerHTML=""
     div4.appendChild(runBtn)
     div4.appendChild(TextArea)
     div3.appendChild(div4)
     div3.id="Add-Css"
     console.log(div3)
+    div3.innerHTML="";
     div3.appendChild(Console)
     div1.appendChild(img)
     div2.appendChild(a)

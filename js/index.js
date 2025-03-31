@@ -258,6 +258,7 @@ document.addEventListener('DOMContentLoaded',displayChallenges)
 
 function displayChallenges(quizServerData){
     const challengesDisplay=document.querySelector('#coding')
+    const challengeDetailsDisplay=document.querySelector('#Code-space')
     quizServerData.forEach(quiz=>{
         selectedQuiz=quiz
         const div=document.createElement('div')
@@ -268,6 +269,7 @@ function displayChallenges(quizServerData){
         img.style.height="270px"
         img.style.width="240px"
         img.addEventListener('click',()=>displayChallengeDetails(quiz))
+        img.addEventListener('click',()=>{challengeDetailsDisplay.scrollIntoView({behavior : 'smooth'}) })
         h3.textContent=quiz.title
         h3.style.width="230px"
         h3.style.height="65px"
@@ -275,7 +277,6 @@ function displayChallenges(quizServerData){
         div.appendChild(img)
         challengesDisplay.appendChild(div)
     })
-   
 }
 
 function displayChallengeDetails(selectedQuiz){

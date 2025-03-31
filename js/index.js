@@ -120,9 +120,10 @@ function fetchAnalysis(){
 document.addEventListener("DOMContentLoaded", displayImages);
 
 function displayImages(resources){
+    const analysisDisplay=document.querySelector('#displayAnalysisList')
+    const displayedContent=document.querySelector('#displayAnalysis')
     resources.forEach(project => {
         selectedProject=project
-        const analysisDisplay=document.querySelector('#displayAnalysisList')
         const div=document.createElement('div')
         let img=document.createElement('img')
         let h3=document.createElement('h3')
@@ -132,6 +133,7 @@ function displayImages(resources){
         img.addEventListener('click', 
             ()=>{displayContent(project)
             })
+        img.addEventListener('click',()=>{displayedContent.scrollIntoView({behavior:'smooth'}) })
         img.style.height="270px"
         img.style.width="240px"
         // console.log(img)
